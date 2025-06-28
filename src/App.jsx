@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+import { Shop } from "./components/Shop";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
         <Header />
-        <Main name={name} />
+        <Shop name={name} />
         <Footer />
       </div>
     </>

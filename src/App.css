@@ -12,6 +12,17 @@
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Patrick Hand", cursive;
+}
+
+p {
+  font-family: "Fredoka", sans-serif;
+}
+
 /* header */
 header {
   min-height: 12.5rem;
@@ -43,7 +54,7 @@ nav ul li {
 }
 
 li {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Patrick Hand", cursive;
 }
 
 a {
@@ -56,7 +67,7 @@ main {
   background-color: #4a2558;
   color: #f5f5f5;
   min-height: 30rem;
-  font-family: "Inter", sans-serif;
+  padding: 20px;
 }
 
 h1 {
@@ -69,9 +80,66 @@ footer {
   background-color: #f5f5f5;
   color: #333;
   min-height: 10rem;
+  padding: 20px;
 }
 
 footer a {
   color: #4a2558;
   text-decoration: none;
+}
+
+/*Product card*/
+.product {
+  border: #997caa 2px dotted;
+  background-color: #997caa;
+  border-radius: 10px;
+  box-shadow: #2d1736 5px 5px 5px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  max-width: 250px;
+  color: #2d1736;
+  font-family: "Fredoka", sans-serif;
+}
+
+.productImg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #73518e;
+  margin-bottom: 20px;
+}
+
+.productBuy {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.product p {
+  padding: 20px 0px;
+  text-align: justify;
+}
+
+.product button {
+  border: none;
+  background-color: #997caa;
+}
+
+.material-symbols-outlined {
+  background-color: #997caa;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 1px 2px 2px 2px #4a2558;
+  border: 1px solid #997caa;
+  border-radius: 3px;
+  margin: 0px;
 }

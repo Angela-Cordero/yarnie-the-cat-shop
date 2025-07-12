@@ -22,4 +22,3 @@ export function Shop() {
     </div>
   );
 }
-export default Shop;

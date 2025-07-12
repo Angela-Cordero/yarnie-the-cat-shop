@@ -23,14 +23,19 @@ p {
   font-family: "Fredoka", sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* header */
 header {
-  min-height: 12.5rem;
+  /* min-height: 12.5rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #f5f5f5;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .logo {
@@ -41,36 +46,28 @@ header {
 nav {
   display: flex;
   align-items: center;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  align-items: center;
 }
 
-nav ul li {
-  list-style: none;
-  font-size: 1.7rem;
-}
-
-li {
+.link {
   font-family: "Patrick Hand", cursive;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #4a2558;
 }
 
-a {
-  color: #4a2558;
-  text-decoration: none;
+.link.active {
+  text-decoration: underline;
 }
 
 /* main */
-.Shop {
+.Main {
   background-color: #4a2558;
   color: #f5f5f5;
-  min-height: 30rem;
+  min-height: 20rem;
   padding: 2rem;
   display: flexbox;
+  flex-grow: 1;
 }
 
 .catalog {
@@ -89,7 +86,7 @@ footer {
   font-family: "Fredoka", sans-serif;
   background-color: #f5f5f5;
   color: #333;
-  min-height: 10rem;
+  /* min-height: 10rem; */
   padding: 20px;
   text-align: center;
 }

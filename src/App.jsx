@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header";
-import { Shop } from "./components/Shop";
+import { Main } from "./components/Main";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="container">
         <Header />
-        <Shop name={name} />
+        <Main name={name} />
         <Footer />
       </div>
     </>

@@ -1,8 +1,7 @@
-import Product from "./Product";
-import turtle from "../img/turtle.jpg";
-import whiteCat from "../img/white-cat.jpg";
-import octopus from "../img/octopus.jpg";
-import sunflower from "../img/sunflower.jpg";
+import Product from "./Product.jsx";
+import { Route, Routes } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 export function Shop() {
   return (
@@ -13,12 +12,9 @@ export function Shop() {
         free to contact us in case you have any question, we will be happy to
         assist.
       </p>
-      <div className="catalog">
-        <Product title="Turtle" price={25} img={turtle} />
-        <Product title="Cat" price={25} img={whiteCat} />
-        <Product title="Octopus" price={25} img={octopus} />
-        <Product title="Sunflower" price={16} img={sunflower} />
-      </div>
+      <div className="products"></div>
+
+      <Product />
     </div>
   );
 }

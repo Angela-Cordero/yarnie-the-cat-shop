@@ -70,10 +70,6 @@ nav {
   flex-grow: 1;
 }
 
-.catalog {
-  margin: 20px 0px;
-}
-
 h1 {
   color: #f5f5f5;
   text-align: center;
@@ -96,6 +92,12 @@ footer a {
   text-decoration: none;
 }
 
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /*Product card*/
 .product {
   border: #997caa 2px dotted;
@@ -104,8 +106,8 @@ footer a {
   box-shadow: #2d1736 5px 5px 5px;
   padding: 20px;
   margin: 10px;
-  display: inline-block;
-  max-width: 150px;
+  gap: 20px;
+  max-width: 250px;
   color: #2d1736;
   font-family: "Fredoka", sans-serif;
 }
@@ -123,7 +125,7 @@ footer a {
   margin: 10px 0px;
 }
 
-.productTitle {
+h3 {
   font-size: 2rem;
   text-align: center;
 }

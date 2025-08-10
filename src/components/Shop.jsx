@@ -1,7 +1,4 @@
 import Product from "./Product.jsx";
-import { Route, Routes } from "react-router-dom";
-
-import { Link } from "react-router-dom";
 
 export function Shop() {
   return (

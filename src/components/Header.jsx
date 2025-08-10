@@ -1,8 +1,14 @@
 import logo from "../img/logo.png";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import { Search } from "lucide-react";
+import { Search, ShoppingBag } from "lucide-react";
+import { useContext } from "react";
+import { CartContext } from "../providers/CartProvider";
 
 export function Header() {
+  const result = useContext(CartContext);
+
+  console.log("💜", result);
+
   return (
     <header>
       <div>
@@ -38,6 +44,10 @@ export function Header() {
 
         <NavLink to="/about" className="link">
           About
+        </NavLink>
+        <NavLink to="yarnie-the-cat-shop/cart">
+          <ShoppingBag />
+          {result.quantity}
         </NavLink>
       </nav>
     </header>

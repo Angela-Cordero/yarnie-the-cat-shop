@@ -3,6 +3,7 @@ import octopus from "../img/octopus.jpg";
 import sunflower from "../img/sunflower.jpg";
 import turtle from "../img/turtle.jpg";
 import { Link, Routes, Route } from "react-router-dom";
+import { Plus } from "lucide-react";
 
 export function Product(props) {
   const products = [
@@ -56,7 +57,7 @@ export function Product(props) {
                 <h4 className="productPrice">${product.price}</h4>
                 <button>
                   <span className="material-symbols-outlined">
-                    add_shopping_cart
+                    <Plus />
                   </span>
                 </button>
               </div>

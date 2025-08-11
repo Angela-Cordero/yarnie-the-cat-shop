@@ -3,7 +3,9 @@ import octopus from "../img/octopus.jpg";
 import sunflower from "../img/sunflower.jpg";
 import turtle from "../img/turtle.jpg";
 import { Link, Routes, Route } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Circle, Plus } from "lucide-react";
+import { app } from "../firebase";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 
 export function Product(props) {
   const products = [
@@ -41,6 +43,43 @@ export function Product(props) {
     },
   ];
 
+  const handleAddProduct = () => {
+    const db = getFirestore(app);
+
+    const productsCollection = collection(db, "products");
+
+    addDoc(productsCollection, {
+      id: 5,
+      name: "Product 5",
+      productTitle: "Dog",
+      price: 60,
+      productInfo: "This plushie is perfect for dog lovers",
+    });
+  };
+
+  const handleBringProduct = () => {
+    const db = getFirestore(app);
+
+    const productsCollection = collection(db, "products");
+
+    const request = getDocs(productsCollection);
+
+    request
+      .then((answer) => {
+        console.log("salió todo bien");
+
+        const finalProducts = [];
+
+        answer.docs.forEach((product) => {
+          finalProducts.push(product.data());
+        });
+        console.log(finalProducts);
+      })
+      .catch(() => {
+        console.log("Error 😢");
+      });
+  };
+
   return (
     <div className="catalog">
       {products.map((product, index) => {
@@ -54,10 +93,22 @@ export function Product(props) {
               ></img>
               <h3>{product.productTitle}</h3>
               <div className="productBuy">
-                <h4 className="productPrice">${product.price}</h4>
-                <button>
+                <h4 className="productPrice">
+                  {Intl.NumberFormat("es-CO", {
+                    style: "currency",
+                    currency: "COP",
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  }).format(product.price * 1000)}
+                </h4>
+                <button onClick={handleAddProduct}>
                   <span className="material-symbols-outlined">
                     <Plus />
+                  </span>
+                </button>
+                <button onClick={handleBringProduct}>
+                  <span>
+                    <Circle />
                   </span>
                 </button>
               </div>

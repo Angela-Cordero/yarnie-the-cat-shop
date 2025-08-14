@@ -8,13 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 import "./firebase";
 
 function App() {
-  const name = "Angela";
-
   return (
     <BrowserRouter>
       <div className="container">
         <Header />
-        <Main name={name} />
+        <Main />
         <Footer />
       </div>
     </BrowserRouter>

@@ -34,7 +34,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   padding: 1rem 2rem;
 }
 
@@ -45,6 +45,7 @@ header {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
@@ -80,7 +81,7 @@ h1 {
 /* footer */
 footer {
   font-family: "Fredoka", sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   color: #333;
   /* min-height: 10rem; */
   padding: 20px;
@@ -92,7 +93,21 @@ footer a {
   text-decoration: none;
 }
 
-.catalog {
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.linkButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #f5f5f5;
+}
+
+.productContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

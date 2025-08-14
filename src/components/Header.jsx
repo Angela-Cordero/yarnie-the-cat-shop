@@ -3,6 +3,7 @@ import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { Search, ShoppingBag } from "lucide-react";
 import { useContext } from "react";
 import { CartContext } from "../providers/CartProvider";
+import { app } from "../firebase";
 
 export function Header() {
   const result = useContext(CartContext);
@@ -34,9 +35,23 @@ export function Header() {
           Home
         </NavLink>
 
-        <NavLink to="/shop" className="link">
-          Shop
-        </NavLink>
+        <button className="linkButton">
+          <NavLink to="/shop" className="link">
+            Shop
+          </NavLink>
+        </button>
+
+        <button className="linkButton">
+          <NavLink to="yarnie-the-cat-shop/shop/keychains" className="link">
+            Keychains
+          </NavLink>
+        </button>
+
+        <button className="linkButton">
+          <NavLink to="yarnie-the-cat-shop/shop/plushies" className="link">
+            Plushies
+          </NavLink>
+        </button>
 
         <NavLink to="/customized" className="link">
           Customized

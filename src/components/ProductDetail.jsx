@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { Product } from "./Product";
 import { Plus } from "lucide-react";
 import { useContext } from "react";
 import { CartContext } from "../providers/CartProvider";

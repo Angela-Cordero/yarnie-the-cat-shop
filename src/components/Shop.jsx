@@ -1,6 +1,6 @@
 import { Link, NavLink, useParams } from "react-router-dom";
 import { app } from "../firebase";
-import { Plus } from "lucide-react";
+
 import {
   getFirestore,
   collection,
@@ -11,6 +11,7 @@ import {
   where,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { Item } from "./Item";
 
 export function Shop() {
   const [products, setProducts] = useState([]);
@@ -86,35 +87,7 @@ export function Shop() {
   return (
     <div className="productContainer">
       {products.map((product, index) => {
-        return (
-          <article key={index} className="productCard">
-            <div className="product">
-              <img
-                src={product.img}
-                alt={`${product.productTitle}Plushie`}
-                className="productImg"
-              ></img>
-              <h3>{product.productTitle}</h3>
-              <div className="productBuy">
-                <h4 className="productPrice">
-                  {Intl.NumberFormat("es-CO", {
-                    style: "currency",
-                    currency: "COP",
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 0,
-                  }).format(product.price * 1000)}
-                </h4>
-                <button>
-                  <span className="material-symbols-outlined">
-                    <Plus />
-                  </span>
-                </button>
-              </div>
-              <p className="productInfo">{product.productInfo}</p>
-              <Link to={`/product/${product.id}`}>See more</Link>
-            </div>
-          </article>
-        );
+        return <Item key={index} product={product} />;
       })}
     </div>
   );

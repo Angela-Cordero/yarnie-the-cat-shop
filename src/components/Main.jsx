@@ -2,7 +2,7 @@ import { Home } from "./Home";
 import { Shop } from "./Shop";
 import { Routes, Route, Link } from "react-router-dom";
 import { Cart } from "./Cart";
-import { ProductDetail } from "./ProductDetail";
+import { ItemDetail } from "./ItemDetail";
 
 export function Main() {
   return (
@@ -14,7 +14,7 @@ export function Main() {
           <Route path="/shop" element={<Shop />} />
           <Route path="yarnie-the-cat-shop/shop/:category" element={<Shop />} />
           <Route path="/customized" element={<h2>Customized</h2>} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ItemDetail />} />
           <Route path="yarnie-the-cat-shop/cart" element={<Cart />} />
         </Routes>
       </main>
